@@ -7,6 +7,7 @@ from .forms import LoginForm,RegisterForm
 from flask_login import login_user, login_required,logout_user
 from . import db
 
+# comment
 
 #create a blueprint
 bp = Blueprint('auth', __name__)
