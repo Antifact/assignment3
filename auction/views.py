@@ -1,5 +1,4 @@
-from flask import Blueprint
-from flask import render_template
+from flask import Blueprint, render_template, request, session
 
 bp = Blueprint('main', __name__)
 
@@ -19,3 +18,13 @@ def item_details():
 @bp.route('/list_item')
 def list_item():
     return render_template('list_item.html')
+
+@bp.route('/login')
+def login():
+    session['email']=request.values.get('email')
+    return render_template('login.html')
+
+@bp.route('/logout')
+def logout():
+    if 'email' in session:
+        session.pop('email', None)

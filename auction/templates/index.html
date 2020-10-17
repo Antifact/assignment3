@@ -1,69 +1,39 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="Kirilee Waddell" content="n9992383">
-    <meta name="IAB207" content="Assignment 2">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    
-     <!-- Font Awesome Icon Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.checked {
-  color: orange;
-}
-</style>
-
-    <title>Home Page</title>
-</head>
-
-<body>
-   <header>
-        <div class="container-fluid">
-            <nav class="nav nav-fill">
-  <a class="nav-link active" href="index.html">HOME</a>
-  <a class="nav-link" href="#">CONTACT US</a>
-  <a class="nav-link" href="#">LOGIN</a>
-                <a class="nav-link" href="watchlist.html">MY WATCHLIST</a>
-  <a class="nav-link" href="#">MY BIDS</a>
-</nav>
-            <div class="row">
-                <div class="col-sm">
-                    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                       
-                        <div class="col">
-                        <img class="logo" src="../images/LogoDiamond.jpg" alt="diamond">
-                            <h3 class="logotext">Shine</h3><h4 class="logotext">AUCTIONS</h4>
-                            <img class="logo" id="right" src="../images/LogoDiamond.jpg" alt="diamond">
-                        </div>
-                        <div class="col"><br><h2>Antique and Vintage Jewellery</h2></div>
-    </form>
-                </div>
+{% block header %}
+<div class="row">
+    <div class="col-sm">
+        <form class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+           
+            <div class="col">
+            <img class="logo" src="../images/LogoDiamond.jpg" alt="diamond">
+                <h3 class="logotext">Shine</h3><h4 class="logotext">AUCTIONS</h4>
+                <img class="logo" id="right" src="../images/LogoDiamond.jpg" alt="diamond">
             </div>
-            <div class="row text">
-                <div class="col"><br>On Sale</div>
-                <div class="col"><br>Free Shipping > $120</div>
-                <div class="col"><br><a class="nav-link" href="list_item.html">List Your Item</a></div>
-            </div>
-        </div>
-        <div class="row text">
-            <div class="col"><br>Current Auctions:</div>
-            <div class="col"><br>Auction 1 | Ends: 1 days</div>
-            <div class="col"><br>Auction 2 | Ends: 3 days</div>
-            <div class="col"><br>Upcoming Auctions:</div>
-            <div class="col"><br>Auction 3 | Starts: 4 days</div>
-            <div class="col"><br>Auction 4 | Starts: 6 days</div>
-        <br></div>
-    </header>
-    
+            <div class="col"><br><h2>Antique and Vintage Jewellery</h2></div>
+</form>
+    </div>
+</div>
+<div class="row text">
+    <div class="col"><br>On Sale</div>
+    <div class="col"><br>Free Shipping > $120</div>
+    <div class="col"><br><a class="nav-link" href="list_item.html">List Your Item</a></div>
+</div>
+</div>
+<div class="row text">
+<div class="col"><br>Current Auctions:</div>
+<div class="col"><br>Auction 1 | Ends: 1 days</div>
+<div class="col"><br>Auction 2 | Ends: 3 days</div>
+<div class="col"><br>Upcoming Auctions:</div>
+<div class="col"><br>Auction 3 | Starts: 4 days</div>
+<div class="col"><br>Auction 4 | Starts: 6 days</div>
+<br></div>
+
+{% endblock %}
+
+{% block content %}
     <main><br>
         <br><br>
         <div class="row">
@@ -424,35 +394,4 @@
 </nav>
     </main><br>
     
-    <footer>
-        <div class="row">
-            <div class="col"><br>
-                <ul>
-                    <li>Help and FAQ's</li>
-                    <li>Privacy and Security</li>
-                    <li>Returns Policy</li>
-                </ul>
-            </div>
-            <div class="col"><br>
-                <ul>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Shipping and Delivery</li>
-                </ul>
-            </div>
-            <div class="col"><br>
-                <ul>
-                    <li>Report Fraud</li>
-                    <li>Terms and Conditions</li>
-                    <li>Sell With Us</li>
-                </ul>
-            </div>
-            <div class="col"><br></div><br><br><br>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock %}
