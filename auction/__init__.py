@@ -39,6 +39,9 @@ def create_app():
     from . import views
     app.register_blueprint(views.bp)
 
+    from . import destinations
+    app.register_blueprint(destinations.destbp)
+
     from . import auth
     app.register_blueprint(auth.bp)
     
