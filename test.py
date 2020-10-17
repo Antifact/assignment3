@@ -10,7 +10,7 @@ u = User()
 u.register("amy", "1234abc", "amy399@gmail.com", "043928483", "12 Close St, Kangaroo Point, 4169")
 print(u)
 
-i = Item("Sapphire Ring", "Prouds", "ring", u.username, 1, 1, 1992, "120.00", "129.00", "3.5cm", "13g", "very good", "worn twice, great quality")
+i = Item("Sapphire Ring", "https://images.immediate.co.uk/production/volatile/sites/21/2019/04/categories_roadcyclinghelmets-e40b0dd.jpg?quality=45&resize=620,413", "Prouds", "ring", u.username, 1, 1, 1992, "120.00", "129.00", "3.5cm", "13g", "very good", "worn twice, great quality")
 print(i)
 
 gem = Gemstone("sapphire", i.name, 2, "square", "blue", "n/a", "1cm", "1cm", "0.5cm", "8g", "desc")
