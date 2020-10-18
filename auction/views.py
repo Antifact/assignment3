@@ -19,7 +19,7 @@ def item_details():
 def list_item():
     return render_template('list_item.html')
 
-@bp.route('/login, methods=['GET' , 'POST'])
+@bp.route('/login', methods=['GET' , 'POST'])
 def login():
     session['email']=request.values.get('email')
     return render_template('login.html')
