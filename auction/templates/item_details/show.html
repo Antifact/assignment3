@@ -36,7 +36,7 @@
     <main></main>
     <br><br><h2>~ Auction 1 ~</h2>
     <h1>{{ item.name }}</h1>
-    <p>Listed by MaryP</p>
+    <p>Listed by {{ item.owner }}</p>
     <div class="row">
         <div class="col-3"></div>
     <div class="card">
@@ -170,13 +170,13 @@
             <div class="col"><br>
                 <h2 class="filter">Item:</h2>
                 <ul>
-                    <li>Type: Necklace</li>
-                    <li>Size: 120cm</li>
-                    <li>Weight: 16g</li>
-                    <li>Brand: Tulisa</li>
-                    <li>Year Created: 2009</li>
-                    <li>Quality: Very good</li>
-                    <li>Description: Only worn twice</li>
+                    <li>Type: {{ item.type }}</li>
+                    <li>Size: {{ item.size }}</li>
+                    <li>Weight: {{ item.weight }}</li>
+                    <li>Brand: {{ item.brand }}</li>
+                    <li>Year Created: {{ item.yrcreated }}</li>
+                    <li>Condition: {{ item.condition }}</li>
+                    <li>Description: {{ item.description }}</li>
                 </ul>
         </div>
       <div class="col"><br>
