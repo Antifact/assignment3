@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-bp = Blueprint('item', __name__, url_prefix='/list_item')
+bp = Blueprint('list_item', __name__, url_prefix='/list_item')
 
 @bp.route('/<id>') 
 def show(id):

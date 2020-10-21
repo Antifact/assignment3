@@ -1,7 +1,7 @@
 from .models import Item
 from flask import Blueprint, render_template
 
-bp = Blueprint('item', __name__, url_prefix='/item_details')
+bp = Blueprint('item_details', __name__, url_prefix='/item_details')
 
 @bp.route('/<id>') 
 def show(id): 
