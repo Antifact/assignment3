@@ -1,4 +1,10 @@
 class User:
+    username: str
+    password: str
+    email: str
+    phone: int
+    address: str
+
     def __init__(self):
         self.user_type='guest'
 

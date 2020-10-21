@@ -2,6 +2,18 @@ from .user import User
 from datetime import datetime
 
 class Item:
+    name: str
+    brand: str
+    itemtype: str
+    owner: str
+    metalamount: int
+    gemamount: int
+    yrcreated: int
+    size: str
+    weight: str
+    condition: str
+    description: str
+
     def __init__(self, name, picture, brand, itemtype, owner, metalamount, gemamount, yrcreated, startprice, originalprice, size, weight, condition, description):
         self.name=name
         self.brand=brand
@@ -28,6 +40,14 @@ class Item:
 
 
 class Metal:
+    name: str
+    metaltype: str
+    karat: str
+    plating: str
+    length: str
+    width: str
+    weight: str
+
     def __init__(self, name, item, metaltype, karat, plating, length, width, weight):
         self.name=name
         self.item=item
@@ -48,6 +68,8 @@ class Metal:
 
 
 class Bid:
+    date_added: datetime
+
     def __init__(self, item, user, bid_price, date_added):
         self.item=item
         self.user=user
@@ -65,6 +87,17 @@ class Bid:
 
 
 class Gemstone:
+    name: str
+    amount: int
+    cuttype: str
+    colour: str
+    clarity: str
+    height: str
+    width: str
+    depth: str
+    weight: str
+    description: str
+
     def __init__(self, name, item, amount, cuttype, colour, clarity, height, width, depth, weight, description):
         self.name=name
         self.item=item
@@ -88,6 +121,8 @@ class Gemstone:
 
 
 class Watchlist:
+    date_added: datetime
+
     def __init__(self, item, user, date_added):
         self.item=item
         self.user=user
