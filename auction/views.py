@@ -54,7 +54,7 @@ def index():
     item = get_item()
     return render_template('index/show.html', item=item)
 
-@bp.route('/watchlist/')
+@bp.route('/watchlist')
 def watchlist():
     item = get_item()
     return render_template('watchlist/show.html', item=item)
