@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     
      <!-- Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,10 +27,10 @@
    <header>
         <div class="container-fluid">
             <nav class="nav nav-fill">
-  <a class="nav-link active" href="index.html">HOME</a>
+  <a class="nav-link active" href="index">HOME</a>
   <a class="nav-link" href="#">CONTACT US</a>
-  <a class="nav-link" href="#">LOGIN</a>
-                <a class="nav-link" href="watchlist.html">MY WATCHLIST</a>
+  <a class="nav-link" href="login">LOGIN</a>
+                <a class="nav-link" href="watchlist">MY WATCHLIST</a>
   <a class="nav-link" href="#">MY BIDS</a>
 </nav>
 

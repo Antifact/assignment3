@@ -1,0 +1,195 @@
+.logo{
+    border-radius: 50%;
+    width: 6vw;
+    height: 7vw;
+    margin-left: 10vw;
+    float: left;
+}
+
+.text{
+    font-family: century gothic;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    text-shadow: 0.1vw 0.1vw white;
+    border: 0.5vw solid white;
+    background-image: linear-gradient(white, antiquewhite);
+}
+
+h3{
+    padding-top: 1vw;
+    text-align: left;
+    margin-left: 14vw;
+    margin-right: 2vw;
+    padding-left: 6vw;
+    font-family: century gothic;
+    background-color: white;
+}
+h4{
+    font-family: gabriola;
+    font-size: 2vw;
+    margin-left: 14vw;
+    margin-right: 2vw;
+    margin-top: -1.4vw;
+    padding-top: 1vw;
+    padding-left: 5.2vw;
+    padding-bottom: 1vw;
+    text-align: left;
+    background-color: white;
+}
+
+#right{
+    float: right;
+    margin-top: -7.5vw;
+}
+
+.sml_img{
+    height: 20vw;
+    width: 20vw;
+    border: 0.15vw solid wheat;
+    margin-left: 6vw;
+}
+
+.smaller_img{
+    height: 15vw;
+    width: 15vw;
+    margin-left: 5vw;
+}
+
+.small{
+    width: 25vw;
+}
+
+.home{
+    width: 15vw;
+}
+
+.home_img{
+    height:10vw;
+    width:10vw;
+    margin-left: 2.5vw;
+}
+
+p{
+    font-family: century gothic;
+    text-align: center;
+}
+
+ul, .mr-sm-2{
+    font-family: century gothic;
+}
+
+.sale{
+    text-decoration-line: line-through;
+    color: red;
+}
+
+.nav-link{
+    font-family: century gothic;
+    padding: 1.5vw;
+    color: grey;
+}
+
+.item{
+    width: 40vw;
+    height:37.2vw;
+    border: 0.15vw solid wheat;
+}
+
+h1, h2{
+    text-align: center;
+    font-family: gabriola;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.center{
+    margin-left: 4vw;
+}
+
+.mb-0{
+    font-size: 2vw;
+    text-align: left;
+    color: black;
+    text-shadow: 0.1vw 0.1vw white;
+    font-weight: bold;
+}
+
+header, footer{
+    background-color: white;
+    background-image: linear-gradient(white, antiquewhite);
+    border-bottom: 2vw dotted antiquewhite;
+}
+
+body{
+    background-color: white;
+    background-image: radial-gradient(lightgray, white, lightgray);
+}
+
+.input-group-text, .card-header{
+    background-color: antiquewhite;
+    background-image: radial-gradient(white, wheat);
+    font-family: century gothic;
+    font-weight: bold;
+}
+
+.btn-primary, .btn-outline-success, .btn-outline-secondary, .btn-secondary, .jumbotron{
+    background-color: white;
+    color: black;
+    border: 0.2 solid salmon;
+    background-image: linear-gradient(white, wheat);
+    font-family: century gothic;
+}
+
+#headingReview{
+    background-image: linear-gradient(white, white);
+}
+
+#stars{
+    margin-left: -10vw;
+}
+
+.next{
+    margin-top: 4vw;
+    text-align: center;
+    font-family: century gothic;
+    width: 50%;
+    margin-left: 4vw;
+}
+
+.input-group, .accordion{
+   width: 70%;
+    margin-left: 15vw;
+}
+
+.right{
+    margin-right: 13vw;
+    float: right;
+}
+
+#center{
+    margin-left: 38vw;
+}
+
+.filter{
+    width: 100%;
+    margin-left: -4vw;
+}
+
+#submit{
+   margin-left: 44vw;
+    margin-top: 2vw;
+    padding-top: 0.5vw;
+    width: 10vw;
+    font-family: gabriola;
+    font-weight: bold;
+    font-size: 2vw;
+    text-shadow: 0.1vw 0.1vw white;
+}
+
+#metal{
+    margin-left: -0.1vw;
+}
