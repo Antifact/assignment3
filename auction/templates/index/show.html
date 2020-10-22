@@ -4,16 +4,19 @@
 <div class="row">
     <div class="col-sm">
         <form class="form-inline my-2 my-lg-0">
-<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-           
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
             <div class="col">
-            <img class="logo" src="../images/LogoDiamond.jpg" alt="diamond">
-                <h3 class="logotext">Shine</h3><h4 class="logotext">AUCTIONS</h4>
+                <img class="logo" src="../images/LogoDiamond.jpg" alt="diamond">
+                <h3 class="logotext">Shine</h3>
+                <h4 class="logotext">AUCTIONS</h4>
                 <img class="logo" id="right" src="../images/LogoDiamond.jpg" alt="diamond">
             </div>
-            <div class="col"><br><h2>Antique and Vintage Jewellery</h2></div>
-</form>
+            <div class="col"><br>
+                <h2>Antique and Vintage Jewellery</h2>
+            </div>
+        </form>
     </div>
 </div>
 <div class="row text">
@@ -23,375 +26,520 @@
 </div>
 </div>
 <div class="row text">
-<div class="col"><br>Current Auctions:</div>
-<div class="col"><br>Auction 1 | Ends: 1 days</div>
-<div class="col"><br>Auction 2 | Ends: 3 days</div>
-<div class="col"><br>Upcoming Auctions:</div>
-<div class="col"><br>Auction 3 | Starts: 4 days</div>
-<div class="col"><br>Auction 4 | Starts: 6 days</div>
-<br></div>
+    <div class="col"><br>Current Auctions:</div>
+    <div class="col"><br>Auction 1 | Ends: 1 days</div>
+    <div class="col"><br>Auction 2 | Ends: 3 days</div>
+    <div class="col"><br>Upcoming Auctions:</div>
+    <div class="col"><br>Auction 3 | Starts: 4 days</div>
+    <div class="col"><br>Auction 4 | Starts: 6 days</div>
+    <br>
+</div>
 
 {% endblock %}
 
 {% block content %}
-    <main><br>
-        <br><br>
-        <div class="row">
-            <div class="col-8">
-            <h1 id="center">~ Auction 1 ~</h1><br></div>
+<main><br>
+    <br><br>
+    <div class="row">
+        <div class="col-8">
+            <h1 id="center">~ Auction 1 ~</h1><br>
+        </div>
         <div class="col">
             <h2>Time Left:</h2>
             <p>1 Day, 2 Hrs, 45 Mins</p>
+        </div>
+    </div><br>
+
+    <div class="row center">
+        <div class="col-2">
+            <div class="accordion filter" id="filter" data-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample"><span class="input-group-text">FILTER
+                    (132):</span>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="mb-0">Colour</h2>
+                        </button>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#filter">
+                        <div class="card-body">
+                            <a class="btn btn-primary" href="#" role="button">Purple</a>
+                            <a class="btn btn-primary" href="#" role="button">Pink</a>
+                            <a class="btn btn-primary" href="#" role="button">Red</a>
+                            <a class="btn btn-primary" href="#" role="button">Orange</a>
+                            <a class="btn btn-primary" href="#" role="button">Yellow</a>
+                            <a class="btn btn-primary" href="#" role="button">Blue</a>
+                            <a class="btn btn-primary" href="#" role="button">Green</a>
+                            <a class="btn btn-primary" href="#" role="button">White</a>
+                            <a class="btn btn-primary" href="#" role="button">Black</a>
+                            <a class="btn btn-primary" href="#" role="button">Brown</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingType">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseType" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="mb-0">Type</h2>
+                        </button>
+                    </div>
+
+                    <div id="collapseType" class="collapse" aria-labelledby="headingType" data-parent="#filter">
+                        <div class="card-body">
+                            <a class="btn btn-primary" href="#" role="button">Necklace</a>
+                            <a class="btn btn-primary" href="#" role="button">Pendant</a>
+                            <a class="btn btn-primary" href="#" role="button">Earrings</a>
+                            <a class="btn btn-primary" href="#" role="button">Ring</a>
+                            <a class="btn btn-primary" href="#" role="button">Bracelet</a>
+                            <a class="btn btn-primary" href="#" role="button">Brooch</a>
+                            <a class="btn btn-primary" href="#" role="button">Set</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingMetal">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseMetal" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="mb-0">Metal</h2>
+                        </button>
+                    </div>
+
+                    <div id="collapseMetal" class="collapse" aria-labelledby="headingMetal" data-parent="#filter">
+                        <div class="card-body">
+                            <a class="btn btn-primary" href="#" role="button">Gold</a>
+                            <a class="btn btn-primary" href="#" role="button">Yellow Gold</a>
+                            <a class="btn btn-primary" href="#" role="button">Rose Gold</a>
+                            <a class="btn btn-primary" href="#" role="button">White Gold</a>
+                            <a class="btn btn-primary" href="#" role="button">Sterling Silver</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingGem">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseGem" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="mb-0">Gemstone</h2>
+                        </button>
+                    </div>
+
+                    <div id="collapseGem" class="collapse" aria-labelledby="headingGem" data-parent="#filter">
+                        <div class="card-body">
+                            <a class="btn btn-primary" href="#" role="button">Crystal</a>
+                            <a class="btn btn-primary" href="#" role="button">Diamond</a>
+                            <a class="btn btn-primary" href="#" role="button">Jade</a>
+                            <a class="btn btn-primary" href="#" role="button">Opal</a>
+                            <a class="btn btn-primary" href="#" role="button">Ruby</a>
+                            <a class="btn btn-primary" href="#" role="button">Emerald</a>
+                            <a class="btn btn-primary" href="#" role="button">Pearl</a>
+                            <a class="btn btn-primary" href="#" role="button">Sapphire</a>
+                            <a class="btn btn-primary" href="#" role="button">Quartz</a>
+                            <a class="btn btn-primary" href="#" role="button">Topaz</a>
+                            <a class="btn btn-primary" href="#" role="button">Amethyst</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingShape">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseShape" aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="mb-0">Shape</h2>
+                        </button>
+                    </div>
+
+                    <div id="collapseShape" class="collapse" aria-labelledby="headingShape" data-parent="#filter">
+                        <div class="card-body">
+                            <a class="btn btn-primary" href="#" role="button">Sphere</a>
+                            <a class="btn btn-primary" href="#" role="button">Oval</a>
+                            <a class="btn btn-primary" href="#" role="button">Diamond</a>
+                            <a class="btn btn-primary" href="#" role="button">Heart</a>
+                            <a class="btn btn-primary" href="#" role="button">Triangle</a>
+                            <a class="btn btn-primary" href="#" role="button">Rectangle</a>
+                            <a class="btn btn-primary" href="#" role="button">Square</a>
+                            <a class="btn btn-primary" href="#" role="button">Other</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div><br>
-        
-        <div class="row center">
-             <div class="col-2">
-                 <div class="accordion filter" id="filter" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><span class="input-group-text">FILTER (132):</span>
-  <div class="card">
-    <div class="card-header" id="headingOne">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <h2 class="mb-0">Colour</h2>
-        </button>
-      </div>      
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#filter">
-      <div class="card-body">
-    <a class="btn btn-primary" href="#" role="button">Purple</a>
-    <a class="btn btn-primary" href="#" role="button">Pink</a>
-          <a class="btn btn-primary" href="#" role="button">Red</a>
-          <a class="btn btn-primary" href="#" role="button">Orange</a>
-          <a class="btn btn-primary" href="#" role="button">Yellow</a>
-          <a class="btn btn-primary" href="#" role="button">Blue</a>
-          <a class="btn btn-primary" href="#" role="button">Green</a>
-          <a class="btn btn-primary" href="#" role="button">White</a>
-          <a class="btn btn-primary" href="#" role="button">Black</a>
-          <a class="btn btn-primary" href="#" role="button">Brown</a>
-        </div></div></div>
-        
-        <div class="card">
-    <div class="card-header" id="headingType">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseType" aria-expanded="true" aria-controls="collapseOne">
-            <h2 class="mb-0">Type</h2>
-        </button>
-      </div>      
-
-    <div id="collapseType" class="collapse" aria-labelledby="headingType" data-parent="#filter">
-      <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Necklace</a>
-          <a class="btn btn-primary" href="#" role="button">Pendant</a>
-          <a class="btn btn-primary" href="#" role="button">Earrings</a>
-          <a class="btn btn-primary" href="#" role="button">Ring</a>
-          <a class="btn btn-primary" href="#" role="button">Bracelet</a>
-          <a class="btn btn-primary" href="#" role="button">Brooch</a>
-          <a class="btn btn-primary" href="#" role="button">Set</a>
-        </div></div></div>
-        
-        <div class="card">
-    <div class="card-header" id="headingMetal">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseMetal" aria-expanded="true" aria-controls="collapseOne">
-            <h2 class="mb-0">Metal</h2>
-        </button>
-      </div>      
-
-    <div id="collapseMetal" class="collapse" aria-labelledby="headingMetal" data-parent="#filter">
-      <div class="card-body">
-    <a class="btn btn-primary" href="#" role="button">Gold</a>
-    <a class="btn btn-primary" href="#" role="button">Yellow Gold</a>
-          <a class="btn btn-primary" href="#" role="button">Rose Gold</a>
-          <a class="btn btn-primary" href="#" role="button">White Gold</a>
-          <a class="btn btn-primary" href="#" role="button">Sterling Silver</a>
-        </div></div></div>
-        
-        <div class="card">
-    <div class="card-header" id="headingGem">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseGem" aria-expanded="true" aria-controls="collapseOne">
-            <h2 class="mb-0">Gemstone</h2>
-        </button>
-      </div>      
-
-    <div id="collapseGem" class="collapse" aria-labelledby="headingGem" data-parent="#filter">
-      <div class="card-body">          
-    <a class="btn btn-primary" href="#" role="button">Crystal</a>
-    <a class="btn btn-primary" href="#" role="button">Diamond</a>
-          <a class="btn btn-primary" href="#" role="button">Jade</a>
-          <a class="btn btn-primary" href="#" role="button">Opal</a>
-          <a class="btn btn-primary" href="#" role="button">Ruby</a>
-          <a class="btn btn-primary" href="#" role="button">Emerald</a>
-          <a class="btn btn-primary" href="#" role="button">Pearl</a>
-          <a class="btn btn-primary" href="#" role="button">Sapphire</a>
-          <a class="btn btn-primary" href="#" role="button">Quartz</a>
-          <a class="btn btn-primary" href="#" role="button">Topaz</a>
-          <a class="btn btn-primary" href="#" role="button">Amethyst</a>
-        </div></div></div>
-        
-        <div class="card">
-    <div class="card-header" id="headingShape">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseShape" aria-expanded="true" aria-controls="collapseOne">
-            <h2 class="mb-0">Shape</h2>
-        </button>
-      </div>      
-
-    <div id="collapseShape" class="collapse" aria-labelledby="headingShape" data-parent="#filter">
-      <div class="card-body">          
-    <a class="btn btn-primary" href="#" role="button">Sphere</a>
-    <a class="btn btn-primary" href="#" role="button">Oval</a>
-          <a class="btn btn-primary" href="#" role="button">Diamond</a>
-          <a class="btn btn-primary" href="#" role="button">Heart</a>
-          <a class="btn btn-primary" href="#" role="button">Triangle</a>
-          <a class="btn btn-primary" href="#" role="button">Rectangle</a>
-          <a class="btn btn-primary" href="#" role="button">Square</a>
-          <a class="btn btn-primary" href="#" role="button">Other</a>
-        </div></div></div>
-        
-        </div></div><br>
-             
-            <div class="col"><ul>View: </ul><a class="btn btn-primary" href="#" role="button">12</a> | <a class="btn btn-primary" href="#" role="button">24</a> | <a class="btn btn-primary" href="#" role="button">48</a> | <a class="btn btn-primary" href="#" role="button">All</a>
-        <button class="btn btn-outline-secondary dropdown-toggle right" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Price: High - Low</a>
-      <a class="dropdown-item" href="#">Price: Low - High</a>
-        <a class="dropdown-item" href="#">Bids: High - Low</a>
-      <a class="dropdown-item" href="#">Bids: Low - High</a>
-      </div><br><br><br>
-            
-             <div class="row">
-             <div class="row">
         <div class="col">
-            <div class="card home">
-            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/GoldJointBracelet.jpg" alt="Gold bracelet"></a>
-                <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-            <div class="col">
-            <p>$89.00</p></div><div class="col sale"><p>{{ item.originalprice }}</p></div><div class="col"><p>(0 Bids)</p></div></div>
+            <ul>View: </ul><a class="btn btn-primary" href="#" role="button">12</a> | <a class="btn btn-primary"
+                href="#" role="button">24</a> | <a class="btn btn-primary" href="#" role="button">48</a> | <a
+                class="btn btn-primary" href="#" role="button">All</a>
+            <button class="btn btn-outline-secondary dropdown-toggle right" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Sort By</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Price: High - Low</a>
+                <a class="dropdown-item" href="#">Price: Low - High</a>
+                <a class="dropdown-item" href="#">Bids: High - Low</a>
+                <a class="dropdown-item" href="#">Bids: Low - High</a>
+            </div><br><br><br>
+
+            <div class="row">
                 <div class="row">
-                    <div class="col-3"></div>
                     <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-        </div></div>
-        
-        <div class="col">
-            <div class="card home">
-            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/SilverDiamondRing.jpg" alt="Silver Diamond Ring"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-            <div class="col">
-            <p>$233.00</p></div><div class="col"><p>(4 Bids)</p></div></div>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Gold bracelet"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$89.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>{{ item.originalprice }}</p>
+                                </div>
+                                <div class="col">
+                                    <p>(0 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Silver Diamond Ring"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$233.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(4 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Amber Flower Earrings"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$105.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>{{ item.originalprice }}</p>
+                                </div>
+                                <div class="col">
+                                    <p>(1 Bid)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Silver Sapphire Ring"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$169.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(2 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span></div></div>
-        </div></div>
-    
-        <div class="col">
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/AmberFlowerEarrings.jpg" alt="Amber Flower Earrings"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$105.00</p></div><div class="col sale"><p>{{ item.originalprice }}</p></div><div class="col"><p>(1 Bid)</p></div></div>
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Silver Rose Quartz Earrings"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$242.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>$297.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(5 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Rose Gold Butterfly Bracelet"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$83.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>$97.50</p>
+                                </div>
+                                <div class="col">
+                                    <p>(1 Bid)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Round Diamond Earrings"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$112.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(1 Bid)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Amber Pendant"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$143.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>$172.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(3 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span></div></div>
-            </div></div>
-        
-        <div class="col">
-            <div class="card home">
-            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/SilverSapphireRing.jpg" alt="Silver Sapphire Ring"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-            <div class="col">
-            <p>$169.00</p></div><div class="col"><p>(2 Bids)</p></div></div>
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-        </div></div>
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Gold Triangular Earrings"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$298.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>$340.50</p>
+                                </div>
+                                <div class="col">
+                                    <p>(0 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Gold Amber Ring"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$308.00</p>
+                                </div>
+                                <div class="col sale">
+                                    <p>$362.40</p>
+                                </div>
+                                <div class="col">
+                                    <p>(6 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Gold Drop Earrings"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$120.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(1 Bid)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"><br><br>
+                        <div class="card home">
+                            <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
+                            <a href="item_details.html"><img class="home_img" src="{{item.picture}}"
+                                    alt="Gold Amethyst Flower Ring"></a>
+                            <h2>{{ item.name }}</h2>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <p>$97.00</p>
+                                </div>
+                                <div class="col">
+                                    <p>(3 Bids)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="row">    
-        <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/SilverRoseEarrings.jpg" alt="Silver Rose Quartz Earrings"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$242.00</p></div><div class="col sale"><p>$297.00</p></div><div class="col"><p>(5 Bids)</p></div></div>   
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-            </div></div>
-            
-            <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/RoseGoldButterfly.jpg" alt="Rose Gold Butterfly Bracelet"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$83.00</p></div><div class="col sale"><p>$97.50</p></div><div class="col"><p>(1 Bid)</p></div></div>    
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-            </div></div>
-        
-        <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/RoundDiamondEarrings.jpg" alt="Round Diamond Earrings"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$112.00</p></div><div class="col"><p>(1 Bid)</p></div></div>   
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-            </div></div>
-            
-            <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/Amber%20Pendant.jpg" alt="Amber Pendant"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$143.00</p></div><div class="col sale"><p>$172.00</p></div><div class="col"><p>(3 Bids)</p></div></div>  
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span></div></div>
-            </div></div>            
-        </div>
-        
-        <div class="row">
-            <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/GoldTriangularEarrings.jpg" alt="Gold Triangular Earrings"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$298.00</p></div><div class="col sale"><p>$340.50</p></div><div class="col"><p>(0 Bids)</p></div></div>    
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-            </div></div>
-        
-        <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/GoldAmberRing.jpg" alt="Gold Amber Ring"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$308.00</p></div><div class="col sale"><p>$362.40</p></div><div class="col"><p>(6 Bids)</p></div></div>  
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span></div></div>
-            </div></div>
-            
-            <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/GoldDropEarrings.jpg" alt="Gold Drop Earrings"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$120.00</p></div><div class="col"><p>(1 Bid)</p></div></div>        
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span></div></div>
-            </div></div>
-            
-            <div class="col"><br><br>
-            <div class="card home">
-                <a class="btn btn-primary" href="watchlist.html" role="button">Add to Watchlist</a>
-                <a href="item_details.html"><img class="home_img" src="../images/GoldAmethystFlowerRing.jpg" alt="Gold Amethyst Flower Ring"></a>
-        <h2>{{ item.name }}</h2>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p>$97.00</p></div><div class="col"><p>(3 Bids)</p></div></div>            
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col">
-                <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span></div></div>
-            </div></div>            
-                 </div></div></div></div>
-        
-    <br><br><nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">4</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
-    </main><br>
-    
+    </div>
+
+    <br><br>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</main><br>
+
 {% endblock %}

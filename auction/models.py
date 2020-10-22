@@ -1,18 +1,23 @@
-from .user import User
 from datetime import datetime
 
+class User:
+
+    def __init__(self):
+        self.user_type='guest'
+
+    def register(self, name, password, email, phone, address):
+        self.username=name
+        self.password=password
+        self.email=email
+        self.phone=phone
+        self.address=address
+
+    def __repr__(self):
+        s = 'Name: {0}, Email: {1}, Phone: {2}, Address: {3}, Type: {4}\n'
+        s = s.format(self.username, self.email, self.phone, self.address, self.user_type)
+        return s
+
 class Item:
-    name: str
-    brand: str
-    itemtype: str
-    owner: str
-    metalamount: int
-    gemamount: int
-    yrcreated: int
-    size: str
-    weight: str
-    condition: str
-    description: str
 
     def __init__(self, name, picture, brand, itemtype, owner, metalamount, gemamount, yrcreated, startprice, originalprice, size, weight, condition, description):
         self.name=name
@@ -40,13 +45,7 @@ class Item:
 
 
 class Metal:
-    name: str
-    metaltype: str
-    karat: str
-    plating: str
-    length: str
-    width: str
-    weight: str
+
 
     def __init__(self, name, item, metaltype, karat, plating, length, width, weight):
         self.name=name
@@ -68,7 +67,7 @@ class Metal:
 
 
 class Bid:
-    date_added: datetime
+    
 
     def __init__(self, item, user, bid_price, date_added):
         self.item=item
@@ -87,16 +86,7 @@ class Bid:
 
 
 class Gemstone:
-    name: str
-    amount: int
-    cuttype: str
-    colour: str
-    clarity: str
-    height: str
-    width: str
-    depth: str
-    weight: str
-    description: str
+  
 
     def __init__(self, name, item, amount, cuttype, colour, clarity, height, width, depth, weight, description):
         self.name=name
@@ -121,7 +111,7 @@ class Gemstone:
 
 
 class Watchlist:
-    date_added: datetime
+    
 
     def __init__(self, item, user, date_added):
         self.item=item

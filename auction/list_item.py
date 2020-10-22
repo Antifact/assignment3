@@ -1,7 +1,3 @@
-from flask import Blueprint, render_template
+from flask import Blueprint
 
 bp = Blueprint('list_item', __name__, url_prefix='/list_item')
-
-@bp.route('/<id>') 
-def show(id):
-    return render_template('list_item/show.html')
