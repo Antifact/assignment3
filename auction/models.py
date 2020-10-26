@@ -17,6 +17,7 @@ class User:
         s = s.format(self.username, self.email, self.phone, self.address, self.user_type)
         return s
 
+
 class Item:
 
     def __init__(self, name, picture, brand, itemtype, owner, metalamount, gemamount, yrcreated, startprice, originalprice, size, weight, condition, description):
@@ -28,6 +29,7 @@ class Item:
         self.gemamount=gemamount
         self.gems=list()
         self.metals=list()
+        self.items=list()
         self.yrcreated=yrcreated
         self.startprice=startprice
         self.originalprice=originalprice
@@ -42,6 +44,9 @@ class Item:
 
     def set_metals(self, metal):
         self.metals.append(metal)
+
+    def set_items(self, item):
+        self.items.append(item)
 
     def get_item_details(self):
         return str(self)
@@ -74,17 +79,20 @@ class Metal:
 
 
 class Bid:
-    
 
     def __init__(self, item, user, bid_price, date_added):
         self.item=item
         self.user=user
         self.bid_price=bid_price
         self.date_added=date_added
+        self.bids=list()
         self.num_guests = 1
 
     def get_item_details(self):
         return str(self)
+    
+    def set_bids(self, bid):
+        self.bids.append(bid)
 
     def __repr__(self):
         str = "Item: {0}, User: {1}, ${2}.00, {3}\n"
@@ -93,7 +101,6 @@ class Bid:
 
 
 class Gemstone:
-  
 
     def __init__(self, name, item, amount, cuttype, colour, clarity, height, width, depth, weight, description):
         self.name=name
@@ -118,7 +125,6 @@ class Gemstone:
 
 
 class Watchlist:
-    
 
     def __init__(self, item, user, date_added):
         self.item=item
