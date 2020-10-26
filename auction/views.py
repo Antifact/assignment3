@@ -1,89 +1,36 @@
 from flask import Blueprint, render_template, request, session
 from .models import Item, Gemstone, Metal
-import sqlite3
 
-try:
-    sqliteConnection = sqlite3.connect('auction.db')
-    cursor = sqliteConnection.cursor()
-    print("Database created and Successfully Connected to SQLite")
-
-    sqlite_select_Query = "select sqlite_version();"
-    cursor.execute(sqlite_select_Query)
-    record = cursor.fetchall()
-    print("SQLite Database Version is: ", record)
-    cursor.close()
-
-except sqlite3.Error as error:
-    print("Error while connecting to sqlite", error)
-finally:
-    if (sqliteConnection):
-        sqliteConnection.close()
-        print("The SQLite connection is closed")
+def get_item():
+    item = Item("Gold Amber Ring", "https://i.pinimg.com/474x/b0/dc/40/b0dc40f5a5bc0ae02e2ba0dafe7926de.jpg", "Talisa", "Ring", "MaryP", 1, 2, 1992, "$120.00", "$230.35", "3.5cm", "8g", "Good", "Worn twice to parties")
+    gem = Gemstone("Amber", "Gold Amber Ring", 1,"Rectangle", "Orange","n/a",  "2cm", "1cm", "0.5cm", "5g", "Rare quality")
+    metal = Metal("Gold", "Gold Amber Ring", "gold", "14k", "copper", "3.5cm", "1cm", "4g")
+    metal1 = Metal("Silver", "Gold Amber Ring", "silver", "n/a", "copper", "1cm", "1cm", "4g")
+    item.set_items(gem)
+    item.set_items(metal)
+    item.set_items(metal1)
+    #item1.set_items(gem)
+    #item1.set_items(metal)
+    #item2 = Item("Gold Triangular Earrings", "https://dl.airtable.com/.attachments/b9d21ac9445a677618d71f0a42efad56/c67d86ad/GoldTriangularEarrings.jpg", "Goldmark", "Earrings", "cookieMonster789", 1, 0,	2017, "$87", "$84.99", "0.7cm",	"4g", "Fair", "Very lightweight")
+    #item = [item1, item2]
+    return item
 
 bp = Blueprint('main', __name__)
 
-def get_item():
-    name = "Gold Amber Ring"
-    originalprice = "$230.35"
-    picture = "https://i.pinimg.com/474x/b0/dc/40/b0dc40f5a5bc0ae02e2ba0dafe7926de.jpg"
-    brand = "Talisa"
-    itemtype = "ring"
-    owner = "MaryP"
-    metalamount = 1
-    gemamount = 2
-    yrcreated = 1992 
-    startprice = "$120.00" 
-    size = "3.5cm" 
-    weight = "8g"
-    condition = "Good"
-    description = "Worn twice to parties"
-    
-    item = Item(name, picture, brand, itemtype, owner, metalamount, gemamount, yrcreated, startprice, originalprice, size, weight, condition, description)
-    return item
-
-def get_gem():
-    name = "Amber"
-    amount= 1
-    cuttype="rectangle"
-    colour="burnt orange"
-    clarity="n/a"
-    height="2.5cm"
-    width="1.5cm"
-    depth="0.5cm"
-    weight="5g"
-    description="Validated from Jewels Australia"
-    
-    gem = Gemstone(name, "Gold Amber Ring", amount, cuttype, colour, clarity, height, width, depth, weight, description)
-    return gem
-
-def get_metal():
-    name="14K Yellow Gold"
-    metaltype="Gold"
-    karat="14k"
-    plating="copper"
-    length="4cm"
-    width="1.3cm"
-    weight="8g"
-
-    metal = Metal(name, "Gold Amber Ring", metaltype, karat, plating, length, width, weight)
-    return metal
-
 @bp.route('/')
-def index():
+def show():
     item = get_item()
     return render_template('index/show.html', item=item)
 
-@bp.route('/watchlist')
-def watchlist():
+@bp.route('/watchlist/<id>')
+def watchlist(id):
     item = get_item()
     return render_template('watchlist/show.html', item=item)
 
-@bp.route('/item_details')
-def item_details():
+""" @bp.route('/item_details/<id>')
+def item_details(id):
     item = get_item()
-    gem = get_gem()
-    metal = get_metal()
-    return render_template('item_details/show.html', item=item, gem=gem, metal=metal)
+    return render_template('item_details/show.html', item=item) """
 
 @bp.route('/list_item')
 def list_item():
