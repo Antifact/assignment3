@@ -8,10 +8,10 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
             <div class="col">
-                <img class="logo" src="../images/LogoDiamond.jpg" alt="diamond">
+                <img class="logo" src="//live.staticflickr.com/5135/5460488313_0dbe6e3d4d.jpg" alt="diamond">
                 <h3 class="logotext">Shine</h3>
                 <h4 class="logotext">AUCTIONS</h4>
-                <img class="logo" id="right" src="../images/LogoDiamond.jpg" alt="diamond">
+                <img class="logo" id="right" src="//live.staticflickr.com/5135/5460488313_0dbe6e3d4d.jpg" alt="diamond">
             </div>
             <div class="col"><br>
                 <h2>Antique and Vintage Jewellery</h2>
@@ -180,15 +180,15 @@
                 <a class="dropdown-item" href="#">Price: Low - High</a>
                 <a class="dropdown-item" href="#">Bids: High - Low</a>
                 <a class="dropdown-item" href="#">Bids: Low - High</a>
-            </div><br><br><br>
+            </div><br>
 
             <div class="row">
                 <div class="row">
                   {% for item in item.items %}
-                    <div class="col">
+                    <div class="col"><br><br>
                         <div class="card home">
                             <a class="btn btn-primary" href="watchlist" role="button">Add to Watchlist</a>
-                            <a href="item_details"><img class="home_img" src="{{item.picture}}"
+                            <a href="item_details/(id)"><img class="home_img" src="{{item.picture}}"
                                     alt="Gold bracelet"></a>
                             <h2>{{ item.name }}</h2>
                             <div class="row no-gutters">
