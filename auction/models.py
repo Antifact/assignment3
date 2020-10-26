@@ -26,6 +26,8 @@ class Item:
         self.owner=owner
         self.metalamount=metalamount
         self.gemamount=gemamount
+        self.gems=list()
+        self.metals=list()
         self.yrcreated=yrcreated
         self.startprice=startprice
         self.originalprice=originalprice
@@ -34,6 +36,12 @@ class Item:
         self.condition=condition
         self.description=description
         self.picture=picture
+
+    def set_gems(self, gem):
+        self.gems.append(gem)
+
+    def set_metals(self, metal):
+        self.metals.append(metal)
 
     def get_item_details(self):
         return str(self)
@@ -45,7 +53,6 @@ class Item:
 
 
 class Metal:
-
 
     def __init__(self, name, item, metaltype, karat, plating, length, width, weight):
         self.name=name
