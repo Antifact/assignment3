@@ -46,8 +46,10 @@
   
         <div class="col"><br>
         <ul class="list-group">
-  <li class="list-group-item"><h2>3 Bids</h2></li>
-  
+  <li class="list-group-item"><h2>Bids:</h2></li>
+  {% for bid in item.bids %}
+  <li class="list-group-item">{{bid.name}} - {{bid.bid_price}}.00<br>{{bid.date_added}}</li>
+  {%endfor%}
             </ul></div></div>
     <div class="row">
     <div class="col"><br>

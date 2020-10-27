@@ -1,15 +1,21 @@
 from flask import Blueprint, render_template, request, session
-from .models import Item, Gemstone, Metal
+from .models import Item, Gemstone, Metal, Bid
 
 def get_item():
     item = Item("Gold Amber Ring", "https://i.pinimg.com/474x/b0/dc/40/b0dc40f5a5bc0ae02e2ba0dafe7926de.jpg", "Talisa", "Ring", "MaryP", 1, 2, 1992, "$120.00", "$230.35", "3.5cm", "15g", "Good", "Worn twice to parties")
     gem = Gemstone("Amber", "Gold Amber Ring", 1,"Rectangle", "Orange", "2cm", "1cm", "0.5cm", "5g")
-    gem2 = Gemstone("Amber", "Gold Amber Ring", 2,"Teardrop", "Orange", "1cm", "0.8cm", "0.5cm", "3g")
+    gem2 = Gemstone("Amber", "Gold Amber Ring", 2,"Teardrop", "Orange", "0.5cm", "0.8cm", "0.5cm", "3g")
     metal = Metal("Gold", "Gold Amber Ring", "Gold", "14k", "copper", "3.5cm", "1cm", "4g")
+    bid = Bid("nyne03", "Amber Pendant", "$144", "5/10/2020")
+    bid1 = Bid("Starlight28", "Amber Pendant", "$150", "8/10/2020")
+    bid2 = Bid("nyne03", "Amber Pendant", "$145", "12/10/2020")
     item.set_items(item)
     item.set_gems(gem)
     item.set_gems(gem2)
     item.set_metals(metal)
+    item.set_bids(bid)
+    item.set_bids(bid1)
+    item.set_bids(bid2)
     item1 = Item("Round Diamond Earrings", "https://dl.airtable.com/.attachments/c408c402b19d6d876560736bd9b85f68/2dd7dd7f/RoundDiamondEarrings.jpg", "Cartier", "Earrings", "cookieMonster789", 1, 2, "2016", "$330", "$299.00", "24mm", "12g", "Excellent", "Never worn. Perfect for functions.")
     gem3 = Gemstone("Diamond", "Round Diamond Earrings", 2,	"White", "Circle", "0.4cm", "0.4cm", "0.25cm", "4g")
     metal1 = Metal("Sterling silver", "Round Diamond Earrings", "Silver", 0, "Silver", "12cm", "44mm", "10g")

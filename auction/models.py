@@ -30,6 +30,7 @@ class Item:
         self.gems=list()
         self.metals=list()
         self.items=list()
+        self.bids=list()
         self.yrcreated=yrcreated
         self.startprice=startprice
         self.originalprice=originalprice
@@ -47,6 +48,9 @@ class Item:
 
     def set_items(self, item):
         self.items.append(item)
+
+    def set_bids(self, bid):
+        self.bids.append(bid)
 
     def get_item_details(self):
         return str(self)
@@ -80,23 +84,18 @@ class Metal:
 
 class Bid:
 
-    def __init__(self, item, user, bid_price, date_added):
+    def __init__(self, item, name, bid_price, date_added):
         self.item=item
-        self.user=user
+        self.name=name
         self.bid_price=bid_price
         self.date_added=date_added
-        self.bids=list()
-        self.num_guests = 1
 
     def get_item_details(self):
         return str(self)
-    
-    def set_bids(self, bid):
-        self.bids.append(bid)
 
     def __repr__(self):
         str = "Item: {0}, User: {1}, ${2}.00, {3}\n"
-        str = str.format(self.item, self.user, self.bid_price, self.date_added)
+        str = str.format(self.item, self.name, self.bid_price, self.date_added)
         return str
 
 
