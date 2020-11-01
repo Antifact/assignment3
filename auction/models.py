@@ -14,9 +14,10 @@ class User(db.Model):
     comments = db.relationship('Comment', backref='user')
 
 class Item(db.Model):
-    __tablename__ = 'Items'
-    ItemName = db.Column(db.String(80), primary_key=True, nullable=False)
+    __tablename__ = 'items'
+    ItemNo = db.Column(db.String(80), primary_key=True, nullable=False)
     Picture = db.Column(db.String(400), nullable=False)
+    ItemName = db.Column(db.String(80), nullable=False)
     Brand = db.Column(db.String(40), nullable=False)
     ItemType = db.Column(db.String(40), nullable=False)
     Owner = db.Column(db.Integer(), nullable=False)
@@ -43,8 +44,8 @@ class Comment(db.Model):
     text = db.Column(db.String(400), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
 
-    user_id = db.Column(db.Integer, db.ForeignKey('users.Username'))
-    item_id = db.Column(db.Integer, db.ForeignKey('items.ItemName'))
+    user_id = db.Column(db.String, db.ForeignKey('users.UserNo'))
+    item_id = db.Column(db.Integer, db.ForeignKey('items.ItemNo'))
 
     def __repr__(self):
         return "<Comment: {}>".format(self.text)

@@ -118,8 +118,8 @@ bp = Blueprint('main', __name__)
 
 @bp.route('/')
 def show():
-    # item = get_item()
-    item = Item.query.filter_by(ItemName=id).first()
+    item = get_item()
+    # item = Item.query.filter_by(ItemNo=id).first()
     return render_template('index/show.html', item=item)
 
 
@@ -131,8 +131,8 @@ def watchlist(id):
 
 @bp.route('/item_details/<id>')
 def item_details(id):
-    #item = Item.query.filter_by(ItemName=id).first()
-    item = get_item()
+    item = Item.query.filter_by(ItemNo=id).first()
+    # item = get_item()
     return render_template('item_details/show.html', item=item)
 
 
