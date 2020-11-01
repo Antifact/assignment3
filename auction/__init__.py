@@ -4,7 +4,7 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
-db=SQLAlchemy()
+db = SQLAlchemy()
 
 #create a function that creates a web application
 # a web server will run this web application
@@ -14,7 +14,7 @@ def create_app():
     app.debug=True
     app.secret_key='utroutoru'
     #set the app configuration data 
-    app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///auction.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///auction.db'
     #initialize db with flask app
     db.init_app(app)
 
